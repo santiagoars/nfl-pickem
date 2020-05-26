@@ -1,6 +1,8 @@
 <template>
   <div>
-      <GameContainer ref="GameContainer" />
+      <div v-for="item in gameComponents" :key="item.id">
+          {{item}}
+      </div>
   </div>
 </template>
 
@@ -38,22 +40,22 @@ export default {
             return mappedTeams;
         },
         createGameComponents(){
-            for(let i = 0; i<this.week.lenght;i++){
+            for(let i = 0; i<this.week.length;i++){
                 this.gameComponents.push(new GameContainer())
             }
         },
         fillGames(){
             for(let i = 0; i < this.week.length; i++){
-                this.$refs.GameContainer.awayName = this.mappedTeams[this.week[i].AwayTeam].FullName
-                this.$refs.GameContainer.awayLine = this.week[i].AwayTeamMoneyLine
-                this.$refs.GameContainer.awayUrl = this.mappedTeams[this.week[i].AwayTeam].photo_url
+                this.gameComponents[i].awayName = this.mappedTeams[this.week[i].AwayTeam].FullName
+                this.gameComponents[i].awayLine = this.week[i].AwayTeamMoneyLine
+                this.gameComponents[i].awayUrl = this.mappedTeams[this.week[i].AwayTeam].photo_url
 
-                this.$refs.GameContainer.homeName = this.mappedTeams[this.week[i].HomeTeam].FullName
-                this.$refs.GameContainer.homeLine = this.week[i].HomeTeamMoneyLine
-                this.$refs.GameContainer.homeUrl = this.mappedTeams[this.week[i].HomeTeam].photo_url
+                this.gameComponents[i].homeName = this.mappedTeams[this.week[i].HomeTeam].FullName
+                this.gameComponents[i].homeLine = this.week[i].HomeTeamMoneyLine
+                this.gameComponents[i].homeUrl = this.mappedTeams[this.week[i].HomeTeam].photo_url
 
-                this.$refs.GameContainer.stadium = this.week[i].StadiumDetails.Name
-                this.$refs.GameContainer.overUnder = this.week[i].OverUnder
+                this.gameComponents[i].stadium = this.week[i].StadiumDetails.Name
+                this.gameComponents[i].overUnder = this.week[i].OverUnder
             }
         }
     },
