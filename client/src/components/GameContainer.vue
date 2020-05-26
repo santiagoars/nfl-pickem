@@ -108,7 +108,7 @@ export default {
     }
 
     .selected-team{
-        background-color: rgb(39, 39, 39);
+        border: 4px solid #013369;
     }
 
     .team-logos{
