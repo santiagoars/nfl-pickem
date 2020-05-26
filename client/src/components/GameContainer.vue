@@ -100,7 +100,7 @@ export default {
 
 <style>
     .game-container{
-        margin: 40px 40px 0 40px;
+        margin: 40px 40px 50px 40px;
     }
 
     .other-team{

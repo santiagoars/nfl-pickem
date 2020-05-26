@@ -36,15 +36,20 @@
         </div>
       </div>
       <div class="games">
+        <WeekContainer />
       </div>
   </div>
 </template>
 
 <script>
+import WeekContainer from '../components/WeekContainer.vue'
 export default {
   name: 'Dashboard',
   props: {
     msg: String
+  },
+  components: {
+    WeekContainer
   }
 }
 </script>
