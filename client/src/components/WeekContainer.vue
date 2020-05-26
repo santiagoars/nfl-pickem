@@ -39,7 +39,7 @@ export default {
         },
         createGameComponents(){
             for(let i = 0; i<this.week.lenght;i++){
-                gameComponents.push(new GameContainer())
+                this.gameComponents.push(new GameContainer())
             }
         },
         fillGames(){
