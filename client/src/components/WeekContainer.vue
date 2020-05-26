@@ -13,7 +13,8 @@ export default {
         return {
             week: [],
             teams: [],
-            mappedTeams: {}
+            mappedTeams: {},
+            gameComponents:[]
         }
     },
     async mounted(){
@@ -35,6 +36,11 @@ export default {
                 mappedTeams[this.teams[i].Key] = this.teams[i]
             }
             return mappedTeams;
+        },
+        createGameComponents(){
+            for(let i = 0; i<this.week.lenght;i++){
+                gameComponents.push(new GameContainer())
+            }
         },
         fillGames(){
             for(let i = 0; i < this.week.length; i++){
