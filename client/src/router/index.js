@@ -3,12 +3,13 @@ import VueRouter from 'vue-router'
 import Dashboard from '..//components/Dashboard.vue'
 import GameContainer from '../components/GameContainer.vue'
 import WeekContainer from '../components/WeekContainer.vue'
+import Login from '../components/Login.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
     {
-      path: '/',
+      path: '/dashboard',
       name: 'dashboard',
       component: Dashboard
     },
@@ -21,6 +22,11 @@ const routes = [
       path: '/week-container',
       name: 'week-container',
       component: WeekContainer
+    },
+    {
+      path: '/',
+      name: 'login',
+      component: Login
     }
   ]
   

@@ -16,7 +16,7 @@
             </div>
             <b-card no-body class="mb-1">
                 <b-card-header header-tag="header" class="p-1" role="tab">
-                    <b-button class="info-button" block v-b-toggle.accordion-1>More game info</b-button>
+                    <b-button class="info-button" block v-b-toggle.accordion-1>Game details</b-button>
                 </b-card-header>
                 <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
                     <b-card-body>

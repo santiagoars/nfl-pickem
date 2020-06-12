@@ -1,6 +1,8 @@
 <template>
   <div ref=container>
-
+    <a href="#" class="float" v-on:click="saveGames">
+        <img src="../assets/save.png" class="my-float">
+    </a>
   </div>
 </template>
 
@@ -59,11 +61,38 @@ export default {
                 this.gameComponents[i].$mount()
                 this.$refs.container.appendChild(this.gameComponents[i].$el)
             }
+        },
+        saveGames(){
+            alert("Games saved!")
         }
     }
 }
 </script>
 
 <style>
+    *{padding:0;margin:0;}
 
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:18px;
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:rgb(234, 236, 240);
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+    z-index: 3000;
+}
+
+.my-float{
+	margin-top:20px;
+    width: 20px;
+}
 </style>
